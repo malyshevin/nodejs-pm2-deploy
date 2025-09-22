@@ -20,7 +20,7 @@ module.exports = {
       path : DEPLOY_PATH,
       key  : DEPLOY_KEY,
       'pre-deploy-local': '',
-      'post-deploy' : 'npm i && cd backend && npm i && npm run build && cd ../frontend && npm i && npm run build && cd .. && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'cd backend && npm i && npm run build && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
     }
   }
