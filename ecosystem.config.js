@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const {
-  DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF = 'origin/master',
+  DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_KEY, DEPLOY_REF = 'origin/master',
 } = process.env;
 
 module.exports = {
@@ -18,6 +18,7 @@ module.exports = {
       ref  : DEPLOY_REF,
       repo : 'https://github.com/malyshevin/nodejs-pm2-deploy',
       path : DEPLOY_PATH,
+      key  : DEPLOY_KEY,
       'pre-deploy-local': '',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
