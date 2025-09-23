@@ -3,6 +3,7 @@
 Стартеркит проекта по автоматизации деплоя фронтенда и бэкенда при помощи pm2 (pm2 deploy)
 
 ```bash
+cd backend
 pm2 deploy production setup
 pm2 deploy production update
 ```
